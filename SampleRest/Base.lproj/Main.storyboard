@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Zipcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rs7-DH-bk6">
+                                <rect key="frame" x="20" y="20" width="210" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="Ul1-S0-abU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIt-a8-f3Q">
+                                <rect key="frame" x="238" y="19" width="83" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="Wlb-Dp-rMb"/>
+                                </constraints>
+                                <state key="normal" title="Get shops"/>
+                                <connections>
+                                    <action selector="btnGetShops:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2uF-lw-z1g"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TUZ-w1-RcT">
+                                <rect key="frame" x="0.0" y="57" width="600" height="543"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TUZ-w1-RcT" firstAttribute="top" secondItem="Rs7-DH-bk6" secondAttribute="bottom" constant="7" id="9rt-53-BQo"/>
+                            <constraint firstItem="KIt-a8-f3Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="19" id="EeQ-Ex-hE3"/>
+                            <constraint firstItem="TUZ-w1-RcT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="J8m-C8-8MX"/>
+                            <constraint firstItem="Rs7-DH-bk6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TZu-Oq-SF3"/>
+                            <constraint firstAttribute="trailing" secondItem="TUZ-w1-RcT" secondAttribute="trailing" id="eec-0V-Ld9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TUZ-w1-RcT" secondAttribute="bottom" id="j8a-kU-hHh"/>
+                            <constraint firstItem="KIt-a8-f3Q" firstAttribute="leading" secondItem="Rs7-DH-bk6" secondAttribute="trailing" constant="8" id="nwI-Wh-5By"/>
+                            <constraint firstItem="Rs7-DH-bk6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="xHZ-hH-81P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblShops" destination="TUZ-w1-RcT" id="Tlp-Xz-r34"/>
+                        <outlet property="txtZipcode" destination="Rs7-DH-bk6" id="CkG-pr-vMe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="227"/>
+        </scene>
+    </scenes>
+</document>
